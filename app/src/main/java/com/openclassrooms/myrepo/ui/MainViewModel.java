@@ -21,7 +21,7 @@ public class MainViewModel extends ViewModel {
     /**
      * Initialise le ViewModel en créant un repository et en chargeant les tâches.
      */
-    public MainViewModel() {
+    public MainViewModel() throws InterruptedException {
         taskRepository = new TaskRepository();
         tasksLiveData = new MutableLiveData<>();
         loadTasks();
@@ -39,7 +39,7 @@ public class MainViewModel extends ViewModel {
      * Charge les tâches à partir du repository et les publie via LiveData.
      * Cette méthode est appelée lors de l'initialisation du ViewModel.
      */
-    private void loadTasks() {
+    private void loadTasks() throws InterruptedException {
         List<Task> tasks = taskRepository.getTasks();
         tasksLiveData.postValue(tasks);
     }

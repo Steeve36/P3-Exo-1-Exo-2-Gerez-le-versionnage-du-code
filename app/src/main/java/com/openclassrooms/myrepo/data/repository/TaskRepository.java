@@ -25,7 +25,7 @@ public class TaskRepository {
      *
      * @return Une liste de tâches obtenue depuis l'API.
      */
-    public List<Task> getTasks() {
+    public List<Task> getTasks() throws InterruptedException {
         return taskApi.getTasks();
     }
 }
