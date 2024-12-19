@@ -26,7 +26,7 @@ public class TaskApi {
 //        calendar.set(Calendar.MONTH, 9);
 
         tasks.add(new Task("Faire les courses pour le dîner", calendar.getTime()));
-        calendar.add(Calendar.DAY_OF_YEAR, 1);// Ajoute un jour
+        calendar.add(Calendar.DAY_OF_YEAR, 1);// Ajoute une année
         tasks.add(new Task("Préparer le rapport pour la réunion", calendar.getTime()));
         calendar.add(Calendar.MONTH, 1);// Ajoute 1 mois
         tasks.add(new Task("Répondre aux e-mails en attente", calendar.getTime()));
